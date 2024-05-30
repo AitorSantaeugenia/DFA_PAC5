@@ -124,10 +124,21 @@ import { MatExpansionModule } from '@angular/material/expansion';
 - Le damos a *deploy* y una vez finalice sino hay problemas, podremos ver nuestra web en: 
 https://dfa-pac5.netlify.app/
 
+<div align="center">
+<img alt="Deployment en Netlify" src="./src/assets/images/img6.png" />
+<p><i>Deployment en Netlify</i></p>
+</div>
+
+<code>Verificación de PWA - Instalación en los deploys</code>
 
 <div align="center">
-<img alt="Deployment en Netlify" src="./src/assets/images/img6.png"   />
-<p><i>Deployment en Netlify</i></p>
+<img alt="Verificación de que funciona cómo PWA en Github Pages" src="./src/assets/images/img7.png" />
+<p><i>Verificación de que funciona cómo PWA en Github Pages</i></p>
+</div>
+
+<div align="center">
+<img alt="Verificación de que funciona cómo PWA en Netlify" src="./src/assets/images/img8.png"   />
+<p><i>Verificación de que funciona cómo PWA en Netlify</i></p>
 </div>
 
 <br><hr><br>
