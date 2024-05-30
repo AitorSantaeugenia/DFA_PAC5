@@ -12,7 +12,7 @@ export class CardService {
   constructor(private http: HttpClient) { }
 
   getAllMovies(): Observable<Movie[]> {
-    return this.http.get<any>('http://www.omdbapi.com/?s=star&apikey=5d8ee22f').pipe(
+    return this.http.get<any>('https://www.omdbapi.com/?s=star&apikey=5d8ee22f').pipe(
       map(response => {
         if (response && response.Search) {
           return response.Search;
@@ -25,6 +25,6 @@ export class CardService {
   }
 
   getMovieById(id: string): Observable<Movie> {
-    return this.http.get<Movie>('http://www.omdbapi.com/?i=' + id + '&apikey=5d8ee22f');
+    return this.http.get<Movie>('https://www.omdbapi.com/?i=' + id + '&apikey=5d8ee22f');
   }
 }

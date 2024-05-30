@@ -32,7 +32,7 @@
     {
       "name": "movies-api",
       "urls": [
-        "http://www.omdbapi.com/**"
+        "https://www.omdbapi.com/**"
       ],
       "cacheConfig": {
         "maxSize": 10,
