@@ -1,5 +1,13 @@
 ## PAC nº #5 Desarrollo frontend avanzado - Máster Desarrollo de Aplicaciones y sitios web
 
+### Rutas al proyecto
+
+### API utilizada
+- Hemos decidido utilizar una *API* de películas llamada https://www.omdbapi.com/ (ya he usado *TMDB API* https://developer.themoviedb.org/reference/intro/getting-started anteriormente, así que he decido usar esta que és algo diferente).
+- Requiere de una llave para ser usada (1 min. registro).
+- Al haber millones de películas, hemos abreviado con https://www.omdbapi.com/?s=star&apikey=5d8ee22f ; así solo aparecen unas 10 películas que contienen la palabra "*Star*".
+- Dejo mi *API key* por si el profesorado la ha de utilizar: 5d8ee22f (no la usaré más, y sé que esto no se debería hacer).
+
 ### Ejercicio 1: Implementación PWA
 <code>Componentes creados</code>
 - En el enunciado se dice que cómo mínimo se han de utilizar dos componentes: <ins>*component-list*</ins> y <ins>*component-detail*</ins>. Luego, posteriormente se habla de dos componentes base (*card* y *grid*).
