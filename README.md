@@ -129,6 +129,18 @@ https://dfa-pac5.netlify.app/
 <p><i>Deployment en Netlify</i></p>
 </div>
 
+<code>Verificación de PWA - Instalación en los deploys</code>
+
+<div align="center">
+<img alt="Verificación de que funciona cómo PWA en Github Pages" src="./Practica/pac5/src/assets/images/img7.png" />
+<p><i>Verificación de que funciona cómo PWA en Github Pages</i></p>
+</div>
+
+<div align="center">
+<img alt="Verificación de que funciona cómo PWA en Netlify" src="./Practica/pac5/src/assets/images/img8.png"   />
+<p><i>Verificación de que funciona cómo PWA en Netlify</i></p>
+</div>
+
 <br><hr><br>
 <div align="center">
     <code>BY-NC-SA @</code> <a href="https://github.com/AitorSantaeugenia">Aitor J. Santaeugenia Marí</a>
