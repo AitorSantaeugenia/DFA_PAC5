@@ -1,0 +1,19 @@
+<div *ngIf="loading" class="d-flex justify-content-center">
+    <mat-spinner></mat-spinner>
+  </div>
+  
+  <table class="table table-hover" *ngIf="!loading">
+    <thead>
+      <tr>
+        <th>IMDB ID</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td><a [routerLink]="['/movie', movie.imdbID]">{{ movie.imdbID }}</a></td>
+        <td>{{ movie.Title }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

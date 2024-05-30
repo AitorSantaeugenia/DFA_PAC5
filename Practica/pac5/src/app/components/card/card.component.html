@@ -1,0 +1,45 @@
+<div class="container">
+  <!-- Spinner -->
+  <div *ngIf="loading" class="d-flex justify-content-center">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <!-- Contenido del modo de vista -->
+  <div *ngIf="!loading" class="animate__animated animate__fadeIn">
+    <h1 class="mt-5">Lista de películas que contienen la palabra "Star"</h1>
+
+    <!-- Botones de Grid y List -->
+    <div class="btn-group mb-3 mt-3" role="group" aria-label="View Mode">
+      <button type="button" class="btn btn-primary" [class.active]="isGridView" (click)="switchToGridView()">Grid View</button>
+      <button type="button" class="btn btn-primary" [class.active]="!isGridView" (click)="switchToListView()">List View</button>
+    </div>
+
+    <div *ngIf="isGridView">
+      <!-- Componente para la vista de GRID -->
+      <div class="container">
+        <div *ngIf="loading" class="d-flex justify-content-center">
+          <mat-spinner></mat-spinner>
+        </div>
+        <div *ngIf="!loading" class="animate__animated animate__fadeIn">
+          <h1 class="mt-5">Lista de películas que contienen la palabra "Star"</h1>
+          <div class="row">
+            <div class="col-md-4 mb-4" *ngFor="let movie of movies">
+              <div class="card card-hover">
+                <img class="card-img-top" [src]="movie.Poster" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{ movie.Title }}</h5>
+                  <p class="card-text">{{ movie.Year }}</p>
+                  <a [routerLink]="['/movie', movie.imdbID]" class="btn btn-primary">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!isGridView">
+      <!-- Componente para la vista de TABLA/LISTA -->
+      <app-grid></app-grid>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div *ngIf="movie; else loading" class="d-flex justify-content-center mt-5">
+  <div class="card text-center animate__animated animate__fadeIn" style="width: 50%;">
+    <div class="card-header d-flex justify-content-between">
+      <h4 class="card-title mb-0 movieHeader">{{ movie.Title }}</h4>
+      <button class="btn btn-primary" (click)="goBack()">Go Back</button>
+    </div>
+    <div class="card-body">
+      <p class="card-text"><strong>Director:</strong> {{ movie.Director }}</p>
+      
+      <img class="card-img-top" [src]="movie.Poster" alt="{{ movie.Title }}" style="max-width: 25%;" *ngIf="movie.Poster !== 'N/A'">
+      <p class="card-text" *ngIf="movie.Poster === 'N/A'">No poster available</p>
+      <mat-expansion-panel class="mt-3">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Additional Details
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p class="card-text"><strong>Year:</strong> {{ movie.Year }}</p>
+        <p class="card-text mt-3"><strong>IMDB Rating:</strong> {{ movie.imdbRating }}</p>
+        <p class="card-text"><strong>Actors:</strong> {{ movie.Actors }}</p>
+        <p class="card-text"><strong>Awards:</strong> {{ movie.Awards }}</p>
+        <p class="card-text">{{ movie.Plot }}</p>
+      </mat-expansion-panel>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading class="text-center" style="height: 200px;">
+  <div class="spinner-container">
+    <mat-progress-spinner class="m-auto" mode="indeterminate"></mat-progress-spinner>
+  </div>
+</ng-template>
